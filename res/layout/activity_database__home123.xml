@@ -1,0 +1,287 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bground_color"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.finalApp.Appkeep.Database_Home" >
+
+    <!-- Text box for equipment serial number -->
+
+    <TextView
+        android:id="@+id/tv_serial_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/serial_num" />
+
+    <EditText
+        android:id="@+id/et_db_serial_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_box"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/serial_num_hint"
+        android:padding="5dp"
+        android:textSize="15sp" />
+
+    <!-- Text box for equipment name -->
+
+    <TextView
+        android:id="@+id/tv_db_equip_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/equip_name" />
+
+    <EditText
+        android:id="@+id/et_db_equip_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_box"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/equip_name"
+        android:padding="5dp"
+        android:textSize="15sp" />
+
+    <!-- Text box for equipment location -->
+
+    <TextView
+        android:id="@+id/tv_db_eqip_location"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/equip_location" />
+
+    <EditText
+        android:id="@+id/et_db_eqip_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_box"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/equip_location"
+        android:padding="5dp"
+        android:textSize="15sp" />
+
+   <!-- Allowing two edit text views linking to datePickers on the same line --> 
+   
+        
+    <TextView
+        android:id="@+id/tv_db_set_dates"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Dates of Last Service and Service Due" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <!-- Button to conect to DatePicker for date of last service -->
+   
+       
+    <EditText
+        android:id="@+id/et_db_set_last_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_box"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/date_last"
+        android:padding="5dp"
+        android:layout_weight="40"
+        android:layout_marginRight="10dp"
+        android:textSize="15sp" />
+     
+
+    <EditText
+        android:id="@+id/et_db_set_due_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_box"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/date_due"
+        android:padding="5dp"
+        android:layout_weight="40"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp" />
+       <!--   <Button
+            android:id="@+id/bn_db_date_last_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/date_last"
+            android:textSize="15sp" />
+
+         Button to conect to DatePicker for date service due 
+
+        <Button
+            android:id="@+id/bn_db_date_due"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/date_due"
+            android:textSize="15sp" />-->
+    
+    </LinearLayout>
+    
+    
+    <!-- Allowing two buttons to appear on the same line within the wrapper LinearLayout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:weightSum="100">
+
+        <!-- Button to input database -->
+
+        <Button
+            android:id="@+id/bn_db_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="50"
+            android:background="@drawable/button_style"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/create_entry"
+            
+            android:textSize="15sp" />
+
+        <!-- Button to view database -->
+
+        <Button
+            android:id="@+id/bn_db_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            
+            android:background="@drawable/button_style"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/view_db"
+            android:layout_weight="50"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    
+     <!-- Buttons to edit, query and delete database -->
+     
+     <TextView
+        android:id="@+id/tv_db_query_by_serial_num"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Enter Serial Number for Item Query" /> 
+        
+      <!-- <EditText
+        android:id="@+id/et_db_query_by_serial_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_box"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/serial_num_hint"
+        android:padding="5dp"
+        
+        android:textSize="15sp" />-->
+
+      <EditText
+          android:id="@+id/et_query_by_row"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+       	  android:background="@drawable/rounded_box"
+      	  android:ems="10"
+      	  android:gravity="center"
+      	  android:hint="@string/row_num"
+          android:padding="5dp"
+        
+          android:textSize="15sp"
+          
+          android:inputType="number" >
+
+          <requestFocus />
+      </EditText>
+     
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        
+        
+        <Button
+        android:id="@+id/bn_db_set_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="20dp"
+        android:layout_weight="30"
+        android:gravity="center"
+        android:background="@drawable/button_style"
+        android:text="@string/query" />
+        
+        
+        <Button
+            android:id="@+id/bn_db_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+             android:layout_weight="30"
+            android:background="@drawable/button_style"
+           
+            android:text="@string/edit_entry"
+            
+            android:textSize="15sp" />
+
+       
+
+        <Button
+            android:id="@+id/bn_db_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            
+            android:background="@drawable/button_style"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/delete_entry"
+            android:layout_weight="30"
+            android:textSize="15sp" />
+        
+        
+     </LinearLayout>
+
+</LinearLayout>
